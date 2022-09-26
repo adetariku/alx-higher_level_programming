@@ -1,0 +1,32 @@
+#include "lists.h"
+#include<stdio.h>
+int check_pal(listint_t **head, listint_t *last);
+/**
+ * is_palindrome - a function to check_pal to see if list is palindrome
+ * @head: ptr to the a list
+ * Return: 0 if not palindrome else 1
+ */
+int is_palindrome(listint_t **head)
+{
+	if (head == NULL || *head == NULL)
+		return (1);
+	return (check_pal(head, *head));
+}
+
+/**
+ * check_pal - a fun to check if the list is palindrome
+ * @head: ptr to the a list
+ * @last: ptr to the end of the list
+ * Return: 0 if not palindrom else 1
+ */
+int check_pal(listint_t **head, listint_t *last)
+{
+	if (last == NULL)
+		return (1);
+	if (check_pal(head, last->next) && (*head)->n == last->n)
+	{
+		*head = (*head)->next;
+		return (1);
+	}
+	return (0);
+}
