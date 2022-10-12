@@ -1,15 +1,12 @@
 #!/usr/bin/python3
+safe_print_division = __import__('3-safe_print_division').safe_print_division
 
+a = 12
+b = 2
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
 
-def safe_print_division(a, b):
-    """
-    divides two integers and prints the result
-    catches divide by zero exception
-    """
-    try:
-        res = a / b
-    except:
-        res = None
-    finally:
-        print("Inside result: {}".format(res))
-    return res
+a = 12
+b = 0
+result = safe_print_division(a, b)
+print("{:d} / {:d} = {}".format(a, b, result))
