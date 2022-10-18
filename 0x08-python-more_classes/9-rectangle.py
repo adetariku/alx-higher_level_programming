@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-Defines a  Rectangle  class.
+This script defines a  Rectangle  class.
 """
 
 
@@ -12,7 +12,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        """returns a new Rectangle instance that is a square w/ h==w==size"""
+        """returns a new Rectangle instance that is a square with h==w==size"""
         return cls(size, size)
 
     @staticmethod
