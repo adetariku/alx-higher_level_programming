@@ -6,7 +6,7 @@ This module provides a Rectangle class.
 
 
 class Rectangle:
-    """A Rectangle class with with instance variables and instance methods. The instance variables include width and height.
+    """A Rectangle class with with instance variables and instance methods. The     instance variables include width and height.
     The instance methods include area, perimeter, etc
     and class attribute print_symbol which is used as symbol for printing.
     """
