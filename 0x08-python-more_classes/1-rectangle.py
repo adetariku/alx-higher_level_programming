@@ -1,5 +1,8 @@
 #!/usr/bin/python3
-"""This is a "Rectangle"  module that provides a simple Rectangle reprentation of a class with  two attributes."""
+"""
+This is a "Rectangle"  module that provides a simple Rectangle reprentation
+of a class with  two attributes.
+"""
 
 
 class Rectangle:
