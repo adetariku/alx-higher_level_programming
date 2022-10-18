@@ -1,18 +1,18 @@
 #!/usr/bin/python3
 """
-Defines a  Rectangle class.
+This script defines a  Rectangle class.
 """
 
 
 class Rectangle:
-    """Representation of a rectangle"""
+    """Representation of a rectangle class."""
 
     number_of_instances = 0
     print_symbol = "#"
 
     @staticmethod
     def bigger_or_equal(rect_1, rect_2):
-        """returns the biggest rectangle based on the area"""
+        """returns the biggest rectangle based on area"""
         if type(rect_1) is not Rectangle:
             raise TypeError("rect_1 must be an instance of Rectangle")
         if type(rect_2) is not Rectangle:
