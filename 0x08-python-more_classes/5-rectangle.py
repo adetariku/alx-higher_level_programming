@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Defines a Rectangle class that have multiple instance methods.
+This defines a Rectangle class that have multiple instance methods.
 """
 
 
 class Rectangle:
     """Representation of a rectangle"""
     def __init__(self, width=0, height=0):
-        """Initializes the rectangle"""
+        """inistance method to create a recrangle object. Initializes the rectangle"""
         self.width = width
         self.height = height
 
