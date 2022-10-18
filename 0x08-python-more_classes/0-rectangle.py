@@ -1,7 +1,9 @@
 #!usr/bin/python3
 """
-This module defines a "Rectangle" class. 
-The class does not do anything.
+Defines a rectangle classs. This class do nothing.
 """
+
+
 class Rectangle:
+    """Empty class """
     pass
