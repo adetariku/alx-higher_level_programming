@@ -1,8 +1,5 @@
 #!/usr/bin/python3
-"""
-This is a "Rectangle"  module that provides a simple Rectangle reprentation with two attributes. 
-These attributes are the width and the height. Default values of both attributes are 0.
-"""
+"""This is a "Rectangle"  module that provides a simple Rectangle reprentation of a class with  two attributes."""
 
 
 class Rectangle:
