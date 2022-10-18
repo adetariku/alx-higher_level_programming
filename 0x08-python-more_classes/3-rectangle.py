@@ -7,7 +7,7 @@ Defines a rectangle class with type attributes.
 
 class Rectangle:
     """A Rectangle class with attributes width and height, and
-    methods area, perimeter.
+    methods area, perimeter and other methods are defined.
     """
     def __init__(self, width=0, height=0):
         self.width = width

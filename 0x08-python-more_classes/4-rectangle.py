@@ -1,13 +1,13 @@
 #!/usr/bin/python3
 """
-Defines a Rectangle class that has two attributes
+This defines a Rectangle class that has two attributes
 """
 
 
 class Rectangle:
-    """Representation of a rectangle"""
+    """Representation of a rectangle class"""
     def __init__(self, width=0, height=0):
-        """Initializes the rectangle"""
+        """Used to create class instances. Initializes the rectangle"""
         self.width = width
         self.height = height
 
