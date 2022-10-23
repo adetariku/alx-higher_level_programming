@@ -1,17 +1,27 @@
+Using ``add_integer``
+-----------------------
+
+Parameter "b" is defaulted to int "98"
+Makes sure the parameters are type int
+Returns the sum of the parameters
+
+First import ``add_integer`
 >>> add_integer = __import__('0-add_integer').add_integer
 
+Now use it:
+
+Basic usage:
 >>> add_integer(0, 0)
 0
->>> add_integer(15, 0)
-15
->>> add_integer(0, 15)
-15
+Negative input:
 >>> add_integer(-2, 2)
 0
->>> add_integer(2, -2)
-0
+One input:
 >>> add_integer(2)
 100
+Float and negative input:
+>>> add_integer(100.3, -2)
+98
 >>> add_integer()
 Traceback (most recent call last):
 TypeError: add_integer() missing 1 required positional argument: 'a'
