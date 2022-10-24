@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-"""
-   is the same as
+"""is the same as
 """
 
 def is_same_class(obj, a_class):
