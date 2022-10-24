@@ -1,27 +1,69 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+Using class ``BaseGeometry``
+-----------------------
 
->>> BaseGeometry.integer_validator("width", 20)
+Class BaseGeometry contains functions that validates given parameters
+Currently contains function area(): not implemented
+Currently contains function integer_validator(name, value):
+  - Validates `value` if it is an integer
+  - Returns nothing if True
 
->>> BaseGeometry.integer_validator("idk", 0)
-Traceback (most recent call last):
-ValueError: idk must be greater than 0
+First import class ``BaseGeometry``
 
->>> BaseGeometry.integer_validator("width", 5, 4)
-Traceback (most recent call last):
-TypeError: integer_validator() takes 3 positional arguments but 4 were given
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
 
->>> BaseGeometry.integer_validator("Time", -32)
-Traceback (most recent call last):
-ValueError: Time must be greater than 0
+Now use it:
 
->>> BaseGeometry.integer_validator("Life", 4.2)
-Traceback (most recent call last):
-TypeError: Life must be an integer
+Function area():
+    >>> bg = BaseGeometry()
+    >>> bg.area()
+    Traceback (most recent call last):
+    ...
+    Exception: area() is not implemented
 
->>> BaseGeometry.integer_validator("cat", "Maiq")
-Traceback (most recent call last):
-TypeError: cat must be an integer
+Function integer_validator basic usage:
+    >>> bg.integer_validator("holberton", 98)
 
->>> BaseGeometry.integer_validator("width")
-Traceback (most recent call last):
-TypeError: integer_validator() missing 1 required positional argument: 'value'
+Function integer_validator 0 input usage:
+    >>> bg.integer_validator("holberton", 0)
+    Traceback (most recent call last):
+    ...
+    ValueError: holberton must be greater than 0
+
+Function integer_validator negative input usage:
+    >>> bg.integer_validator("holberton", -1)
+    Traceback (most recent call last):
+    ...
+    ValueError: holberton must be greater than 0
+
+Function integer_validator non int input usage:
+    >>> bg.integer_validator("holberton", "school")
+    Traceback (most recent call last):
+    ...
+    TypeError: holberton must be an integer
+
+Function integer_validator infinity input usage:
+    >>> bg.integer_validator("holberton", float("inf"))
+    Traceback (most recent call last):
+    ...
+    TypeError: holberton must be an integer
+
+Function integer_validator large int input usage:
+    >>> bg.integer_validator("holberton", 9999999999999999999999999)
+
+Function integer_validator float input usage:
+    >>> bg.integer_validator("holberton", 90.8)
+    Traceback (most recent call last):
+    ...
+    TypeError: holberton must be an integer
+
+Function integer_validator list usage:
+    >>> bg.integer_validator("holberton", [90])
+    Traceback (most recent call last):
+    ...
+    TypeError: holberton must be an integer
+
+Function integer_validator no input usage:
+    >>> bg.integer_validator()
+    Traceback (most recent call last):
+    ...
+    TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
