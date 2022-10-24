@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-
+"""
+   Base GEOMETRY
+"""
 
 class BaseGeometry:
+    """ area is calculated """
     def area(self):
         raise Exception("area() is not implemented")
 
