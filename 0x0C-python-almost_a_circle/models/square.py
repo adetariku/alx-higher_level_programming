@@ -1,10 +1,12 @@
 #!/usr/bin/python3
-"""square"""
-from  models.rectangle import Rectangle 
+"""Square model"""
+from models.rectangle import Rectangle
 
 
 class Square(Rectangle):
+    """class for square"""
     def __init__(self, size, x=0, y=0, id=None):
+        """initialize the square"""
         super().__init__(size, size, x, y, id)
 
     @property
@@ -18,19 +20,26 @@ class Square(Rectangle):
         self.width = value
         self.height = value
 
+    def __str__(self):
+        """returns information about the shape"""
+        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(self.id,
+                                                         self.x,
+                                                         self.y,
+                                                         self.height)
+
     def update(self, *args, **kwargs):
         """updates the square??? i think"""
-        ind = 0
+        index = 0
         if args is not None and len(args) != 0:
             for argument in args:
-                ind += 1
-                if ind == 1:
+                index += 1
+                if index == 1:
                     self.id = argument
-                elif ind == 2:
+                elif index == 2:
                     self.size = argument
-                elif ind == 3:
+                elif index == 3:
                     self.x = argument
-                elif ind == 4:
+                elif index == 4:
                     self.y = argument
         else:
             for key, values in kwargs.items():
@@ -39,14 +48,6 @@ class Square(Rectangle):
     def to_dictionary(self):
         """makes a self dictionary"""
         dictionary = {}
-        for ind in ["id", "size", "x", "y"]:
-            dictionary[ind] = getattr(self, ind)
+        for index in ["id", "size", "x", "y"]:
+            dictionary[index] = getattr(self, index)
         return dictionary
-
-    def __str__(self):
-        """returns information about the shape"""
-        return "[Square] ({:d}) {:d}/{:d} - {:d}".format(
-                self.id,                                                                        self.x,
-                self.y,
-                self.height
-                )
