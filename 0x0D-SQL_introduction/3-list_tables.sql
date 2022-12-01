@@ -1,3 +1,3 @@
-sts all the tables of a database in your MySQL server.:wq
+-- lists all the tables of a database in your MySQL server.:wq
 
 SHOW tables;
